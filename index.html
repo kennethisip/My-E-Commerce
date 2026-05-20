@@ -1,0 +1,160 @@
+# Simple E-Commerce Website (Single HTML File)
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-Commerce</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #007bff;
+      color: white;
+    }
+
+    .hero button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: white;
+      color: #007bff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My E-Commerce Shop</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Our Store</h2>
+    <p>Buy the best products at affordable prices.</p>
+    <button onclick="shopNow()">Shop Now</button>
+  </section>
+
+  <section class="products" id="products">
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>$20</p>
+      <button onclick="addToCart('Product 1')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>$35</p>
+      <button onclick="addToCart('Product 2')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>$50</p>
+      <button onclick="addToCart('Product 3')">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <footer id="contact">
+    <p>Email: shop@example.com</p>
+    <p>© 2026 My E-Commerce Shop</p>
+  </footer>
+
+  <script>
+    function addToCart(product) {
+      alert(product + ' added to cart!');
+    }
+
+    function shopNow() {
+      document.getElementById('products').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
+
